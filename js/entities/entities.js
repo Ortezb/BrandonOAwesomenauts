@@ -58,7 +58,6 @@ game.PlayerEntity = me.Entity.extend({
         
         if(me.input.isKeyPressed("attack")){           
             if(!this.renderable.isCurrentAnimation("attack")){
-                console.log(!this.renderable.isCurrentAnimation("attack"));
                 //Sets the current animation to attack and once that is over
                 //goes back to the idle animation
                 this.renderable.setCurrentAnimation("attack", "idle");
@@ -215,6 +214,10 @@ game.EnemyBaseEntity = me.Entity.extend({
         return true;
     },
     
+    loseHealth: function(damage){
+        this.health = this.health - damage;
+    },
+    
     onCollision: function(){
         
     }
@@ -244,7 +247,7 @@ game.EnemyCreep = me.Entity.extend({
         this.now = new Date().getTime();
         this.body.setVelocity(3, 20);
         
-        this.type = "EnamyCreep";
+        this.type = "EnemyCreep";
         
         this.renderable.addAnimation("walk", [3, 4, 5], 80);
         this.renderable.setCurrentAnimation("walk");
