@@ -30,7 +30,7 @@ game.GameTimerManager = Object.extend({
     }
 });
 
-game.HeroDeathManager = Objct.extend({
+game.HeroDeathManager = Object.extend({
     init: function(x, y, settings){
         this.alwaysUpdate = true;
     },
@@ -48,16 +48,14 @@ game.HeroDeathManager = Objct.extend({
 game.ExperienceManager = Object.extend({
     init: function(x, y, settings){
         this.alwaysUpdate = true;
-        this.gameOver = false;
+        this.gameover = false;
     },
     
     update: function(){
-        if(game.data.win === true && !this.gameOver){
+        if(game.data.win === true && !this.gameover){
             this.gameOver(true);
-        }else if(game.data.win === false && !this.gameOver){
-            game.data.exp += 1;
-            this.gameOver = true;
-            me.save.exp = game.data.exp;
+        }else if(game.data.win === false && !this.gameover){
+           this.gameOver(false);
         }
         
         return true;
@@ -67,11 +65,12 @@ game.ExperienceManager = Object.extend({
         if(win){
             game.data.exp += 10;
         }else{
-            
+            game.data.exp += 1;
         }
         
-        this.gameOver = true;
+        this.gameover = true;
         me.save.exp = game.data.exp;
+
     }
     
 });
