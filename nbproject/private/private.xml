@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/gamemanagers/HeroDeathManager.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/gamemanagers/GameManager.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/entities/entities.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/resources.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/game.js</file>
+            <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/gamemanagers/SpendGold.js</file>
         </group>
     </open-files>
 </project-private>
