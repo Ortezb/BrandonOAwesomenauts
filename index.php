@@ -30,7 +30,7 @@
                     
                     <div class='password'>
                         <label for='password'>Password</label>
-                        <input type='text' name='password' id='password'>
+                        <input type='password' name='password' id='password'>
                     </div>
                     
                     <button type='button' id='register'>Register</button>
@@ -64,7 +64,6 @@
                 <script type="text/javascript" src="js/screens/spendExp.js"></script>
                 <script type="text/javascript" src="js/screens/loadProfile.js"></script>
                 <script type="text/javascript" src="js/screens/newProfile.js"></script>
-                
 		<!-- /build -->
 		<!-- Bootstrap & Mobile optimization tricks -->
 		<script type="text/javascript">
@@ -117,7 +116,34 @@
                     .fail(function(response){
                         alert("Fail");
                     });
-                });   
+                });
+                $("#load").bind("click", function(){
+                    $.ajax({
+                        type: "POST",
+                        url: "php/controller/login-user.php",
+                        data: {
+                            username: $('#username').val(),
+                            password: $('#password').val()
+                        },
+                        dataType: "text"
+                    })
+                    .success(function(response){
+                        if(response==="Invalid username and password"){
+                            alert(response);
+                        }else{
+                            var data = jQuery.parseJSON(response);
+                            game.data.exp = data["exp"];
+                            game.data.exp1 = data["exp1"];
+                            game.data.exp2 = data["exp2"];
+                            game.data.exp3 = data["exp3"];
+                            game.data.exp4 = data["exp4"];
+                            me.state.change(me.state.SPENDEXP);
+                        }        
+                    })
+                    .fail(function(response){
+                        alert("Fail");
+                    });
+                });
                 </script>
 	</body>
 </html>
