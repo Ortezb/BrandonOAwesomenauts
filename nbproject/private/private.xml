@@ -5,8 +5,8 @@
         <group>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/gamemanagers/GameManager.js</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/index.php</file>
-            <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/php/controller/login-user.php</file>
             <file>file:/C:/xampp/htdocs/BrandonOAwesomenauts/js/screens/title.js</file>
         </group>
     </open-files>

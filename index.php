@@ -66,6 +66,7 @@
                 <script type="text/javascript" src="js/screens/newProfile.js"></script>
 		<!-- /build -->
 		<!-- Bootstrap & Mobile optimization tricks -->
+                <!-- For touching and scrolling -->
 		<script type="text/javascript">
 			window.onReady(function onReady() {
 				game.onload();

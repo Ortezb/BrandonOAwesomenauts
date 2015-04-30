@@ -12,7 +12,9 @@ game.TitleScreen = me.ScreenObject.extend({
                         this.font = new me.Font("Arial", 46, "white");
                         me.input.registerPointerEvent('pointerdown', this, this.newGame.bind(this), true);
                     },
-                    
+                    /**	
+	             *  text that helps me know to start a new game
+	             */ 
                     draw: function(renderer){
                         this.font.draw(renderer.getContext(), "START A NEW GAME", this.pos.x, this.pos.y);
                     },

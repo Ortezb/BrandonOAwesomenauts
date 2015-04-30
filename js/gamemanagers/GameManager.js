@@ -3,6 +3,9 @@ game.ExperienceManager = Object.extend({
         this.alwaysUpdate = true;
         this.gameover = false;
     },
+        /**	
+         * alerts that tell me if I win or lose
+	 */
     update: function() {
         if (game.data.win === true && !this.gameover) {
             this.gameOver(true);
@@ -51,6 +54,3 @@ game.ExperienceManager = Object.extend({
     }
 
 });
-
-
-
